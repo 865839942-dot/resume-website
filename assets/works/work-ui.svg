@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#e6f9f6"/>
+  <g fill="none" stroke="#11a89b" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="580" y="240" width="440" height="320" rx="20"/>
+    <path d="M580 320 L1020 320"/>
+    <path d="M800 320 L800 560"/>
+  </g>
+  <text x="800" y="700" font-family="Nunito, 'Noto Sans SC', sans-serif" font-size="46" font-weight="800" fill="#11a89b" text-anchor="middle">剧情界面 · 待替换案例图</text>
+  <text x="800" y="760" font-family="Nunito, 'Noto Sans SC', sans-serif" font-size="26" font-weight="600" fill="#5c9c94" text-anchor="middle">16:9 占位图，可直接替换为截图</text>
+</svg>
