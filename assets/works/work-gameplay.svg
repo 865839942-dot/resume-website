@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#e6f9f6"/>
+  <g fill="none" stroke="#11a89b" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="620" y="240" width="360" height="360" rx="36"/>
+    <circle cx="710" cy="330" r="16" fill="#11a89b" stroke="none"/>
+    <circle cx="890" cy="330" r="16" fill="#11a89b" stroke="none"/>
+    <circle cx="710" cy="510" r="16" fill="#11a89b" stroke="none"/>
+    <circle cx="890" cy="510" r="16" fill="#11a89b" stroke="none"/>
+    <circle cx="800" cy="420" r="16" fill="#11a89b" stroke="none"/>
+  </g>
+  <text x="800" y="700" font-family="Nunito, 'Noto Sans SC', sans-serif" font-size="46" font-weight="800" fill="#11a89b" text-anchor="middle">玩法设计 · 待替换案例图</text>
+  <text x="800" y="760" font-family="Nunito, 'Noto Sans SC', sans-serif" font-size="26" font-weight="600" fill="#5c9c94" text-anchor="middle">16:9 占位图，可直接替换为截图</text>
+</svg>
