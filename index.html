@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>程语燃 · 任务策划 | 个人主页</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 图标合集：统一线性图标（参考 animal-island-ui：不用 emoji 做功能图标） -->
+<svg style="display:none">
+  <defs>
+    <symbol id="icon-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 15h6M9 9h3"/></symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></symbol>
+    <symbol id="icon-tree" viewBox="0 0 24 24"><path d="M12 2l4 5h-2.5l3.5 5h-2.5l3.5 5H6l3.5-5H7l3.5-5H8z"/><path d="M12 19v3"/></symbol>
+    <symbol id="icon-frame" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-5 5"/></symbol>
+    <symbol id="icon-gamepad" viewBox="0 0 24 24"><rect x="2" y="8" width="20" height="10" rx="4"/><path d="M7 11v4M5 13h4"/><circle cx="16" cy="12" r="1"/><circle cx="18" cy="15" r="1"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M5 21c0-8 4-14 14-16-2 10-8 14-16 16z"/><path d="M6 20c3-3 6-7 8-11"/></symbol>
+    <symbol id="icon-trophy" viewBox="0 0 24 24"><path d="M8 4h8v4a4 4 0 0 1-8 0z"/><path d="M6 5H4v2a3 3 0 0 0 3 3"/><path d="M18 5h2v2a3 3 0 0 1-3 3"/><path d="M10 13v3h4v-3"/><path d="M9 20h6"/><path d="M9 17h6l1 3H8z"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M4 4h4l1.5 4.5L8 11a12 12 0 0 0 6.5 6.5l2.5-1.5 4.5 1.5v4c0 1-1 2-2 2C9.5 23 1 14.5 1 6c0-1 1-2 2-2z"/></symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><circle cx="9" cy="10.5" r="1"/><circle cx="12" cy="10.5" r="1"/><circle cx="15" cy="10.5" r="1"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 3v4M16 3v4"/></symbol>
+    <symbol id="icon-cap" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="M6 11v4c0 1.5 3 3 6 3s6-1.5 6-3v-4"/></symbol>
+    <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5 12.8 14 9.5 14.5 11.2 10z"/></symbol>
+    <symbol id="icon-film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
+    <symbol id="icon-dice" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="8.5" cy="8.5" r="1"/><circle cx="15.5" cy="8.5" r="1"/><circle cx="8.5" cy="15.5" r="1"/><circle cx="15.5" cy="15.5" r="1"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="icon-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M12 9v11"/></symbol>
+    <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M3 11l3-3 4 4-3 3z"/><path d="M21 11l-3-3-4 4 3 3z"/><path d="M10 12l2 2 2-2"/></symbol>
+    <symbol id="icon-message" viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6-5.4-2.9-5.4 2.9 1-6-4.4-4.3 6.1-.9z"/></symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="14" r="4"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="icon-zoom" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="M15 15l5 5"/><path d="M10 7v6M7 10h6"/></symbol>
+    <symbol id="icon-sword" viewBox="0 0 24 24"><path d="M6.5 17.5L17 7"/><path d="M14 4l6 6"/><path d="M4 20l3-1 1-3"/></symbol>
+    <symbol id="icon-mask" viewBox="0 0 24 24"><path d="M4 9c0-3 3.5-5 8-5s8 2 8 5-2 9-8 9-8-6-8-9z"/><circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/><path d="M9 15q3 2 6 0"/></symbol>
+    <symbol id="icon-puzzle" viewBox="0 0 24 24"><rect x="4" y="4" width="10" height="10" rx="2"/><rect x="10" y="10" width="10" height="10" rx="2"/></symbol>
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  </defs>
+</svg>
+
+<!-- 左侧常驻导航：参考 animal-island-ui demo 站点的 sidebar 布局，第一眼即可看到全部分区 -->
+<aside class="sidebar">
+  <a href="#hero" class="sidebar-top">
+    <span class="sidebar-id">
+      <span class="sidebar-name">程语燃</span>
+      <span class="sidebar-role">任务策划</span>
+    </span>
+  </a>
+  <nav class="sidebar-nav">
+    <a href="#profile" class="nav-item">
+      <span class="nav-icon nav-icon--blue"><svg class="icon"><use href="#icon-doc"/></svg></span>
+      <span>档案</span>
+    </a>
+    <a href="#experience" class="nav-item">
+      <span class="nav-icon nav-icon--orange"><svg class="icon"><use href="#icon-briefcase"/></svg></span>
+      <span>工作经历</span>
+    </a>
+    <a href="#skills" class="nav-item">
+      <span class="nav-icon nav-icon--green"><svg class="icon"><use href="#icon-tree"/></svg></span>
+      <span>技能树</span>
+    </a>
+    <a href="#portfolio" class="nav-item">
+      <span class="nav-icon nav-icon--purple"><svg class="icon"><use href="#icon-camera"/></svg></span>
+      <span>作品集</span>
+    </a>
+    <div class="nav-subitems">
+      <a href="#portfolio-task" class="nav-subitem">任务叙事</a>
+      <a href="#portfolio-plot" class="nav-subitem">剧情玩法</a>
+      <a href="#portfolio-anime" class="nav-subitem">动画演出</a>
+    </div>
+    <a href="#gamelog" class="nav-item">
+      <span class="nav-icon nav-icon--yellow"><svg class="icon"><use href="#icon-gamepad"/></svg></span>
+      <span>游戏图鉴</span>
+    </a>
+    <a href="#contact" class="nav-item">
+      <span class="nav-icon nav-icon--lime"><svg class="icon"><use href="#icon-mail"/></svg></span>
+      <span>联系方式</span>
+    </a>
+  </nav>
+  <a href="#contact" class="sidebar-bottom">
+    <svg class="icon"><use href="#icon-chat"/></svg>快速联系
+  </a>
+</aside>
+
+<div class="page">
+
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <div class="hero-leaf-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-tag">欢迎来到我的主页 <span class="hero-badge">求职中</span></p>
+        <h1 class="hero-name">程语燃</h1>
+        <p class="hero-role" id="typedRole"></p>
+
+        <div class="hero-stats">
+          <span class="tag tag--orange"><svg class="icon"><use href="#icon-briefcase"/></svg>任务策划</span>
+          <span class="tag tag--green"><svg class="icon"><use href="#icon-leaf"/></svg>2024年至今 · 网易雷火</span>
+          <span class="tag tag--blue"><svg class="icon"><use href="#icon-cap"/></svg>北京电影学院</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-default">查看作品集</a>
+          <a href="#contact" class="btn btn-primary">联系我</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 档案 -->
+    <section id="profile" class="section">
+      <h2 class="section-title">
+        <span class="title-card"><svg class="icon"><use href="#icon-doc"/></svg>档案</span>
+      </h2>
+      <div class="card">
+        <div class="profile-row">
+          <span class="profile-key"><svg class="icon"><use href="#icon-leaf"/></svg>姓名</span>
+          <span class="profile-val">程语燃</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key"><svg class="icon"><use href="#icon-briefcase"/></svg>当前职业</span>
+          <span class="profile-val">网易雷火《逆水寒》端游 · 任务策划</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key"><svg class="icon"><use href="#icon-cap"/></svg>院校</span>
+          <span class="profile-val">北京电影学院 · 2021级 广播电视编导</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key"><svg class="icon"><use href="#icon-calendar"/></svg>在职时间</span>
+          <span class="profile-val">2024年 至今 <span class="tag tag--green tag--sm">进行中</span></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 工作经历 -->
+    <section id="experience" class="section">
+      <h2 class="section-title">
+        <span class="title-card"><svg class="icon"><use href="#icon-briefcase"/></svg>工作经历</span>
+      </h2>
+      <div class="card">
+        <div class="quest-header">
+          <span class="tag tag--green tag--sm"><svg class="icon"><use href="#icon-leaf"/></svg>进行中</span>
+          <span class="quest-time">2024 — 至今</span>
+        </div>
+        <h3 class="quest-title">网易雷火 · 逆水寒端游 · 任务策划</h3>
+        <p class="quest-desc">
+          负责重要支线流程设计、剧情沉浸体验打造，以及玩法 / 关卡 / 活动系统的配套落地；
+          主导多项全服剧情活动的规划与上线，跨部门协作推进创新玩法系统。
+        </p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 技能树 -->
+    <section id="skills" class="section">
+      <h2 class="section-title">
+        <span class="title-card"><svg class="icon"><use href="#icon-tree"/></svg>技能树</span>
+      </h2>
+      <div class="skill-grid">
+
+        <div class="card skill-card">
+          <div class="skill-head">
+            <span class="skill-icon skill-icon--blue"><svg class="icon"><use href="#icon-doc"/></svg></span>
+            <h3>叙事设计并落地</h3>
+            <span class="skill-stars"><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg></span>
+          </div>
+          <div class="skill-body">
+            <div class="skill-block">
+              <span class="skill-label"><svg class="icon"><use href="#icon-leaf"/></svg>方案设计</span>
+              <p>重要支线流程设计 / 剧情沉浸体验 / 玩法 / 关卡 / 活动系统配套</p>
+            </div>
+            <div class="skill-block">
+              <span class="skill-label"><svg class="icon"><use href="#icon-leaf"/></svg>任务制作</span>
+              <p>周年庆 / 雅集 / 天宁节支线 / 奇遇 / 逸闻（流程体验从 1h+ 到 10 分钟均有覆盖）</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card skill-card featured">
+          <div class="skill-head">
+            <span class="skill-icon skill-icon--purple"><svg class="icon"><use href="#icon-window"/></svg></span>
+            <h3>剧情玩法界面规划落地</h3>
+            <span class="skill-stars"><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg></span>
+          </div>
+          <div class="skill-body">
+            <div class="skill-block">
+              <span class="skill-label"><svg class="icon"><use href="#icon-leaf"/></svg>方案设计</span>
+              <p>规划全服剧情活动【天宁节】系列任务中多个界面系统，结合剧情进行风格化创作并落地。2026周年庆任务中独立规划落地 DIY成就卡系统，引起大规模讨论。</p>
+            </div>
+            <div class="skill-block">
+              <span class="skill-label"><svg class="icon"><use href="#icon-leaf"/></svg>跨部门协作</span>
+              <p>对接 AI 部门 / 网站组，独立规划并落地评论功能及多个剧情界面。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card skill-card">
+          <div class="skill-head">
+            <span class="skill-icon skill-icon--orange"><svg class="icon"><use href="#icon-film"/></svg></span>
+            <h3>动画演出</h3>
+            <span class="skill-stars"><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg><svg class="icon icon-star"><use href="#icon-star"/></svg></span>
+          </div>
+          <div class="skill-body">
+            <div class="skill-block">
+              <span class="skill-label"><svg class="icon"><use href="#icon-leaf"/></svg>动画制作</span>
+              <p>使用逆水寒编辑器「大宋映画」进行剧情内动画制作。</p>
+            </div>
+            <div class="skill-block">
+              <span class="skill-label"><svg class="icon"><use href="#icon-leaf"/></svg>动画接口</span>
+              <p>对接组内重要动画，与专门动画部门协作，把关整体质量并进行监修。</p>
+            </div>
+            <div class="skill-block">
+              <span class="skill-label"><svg class="icon"><use href="#icon-leaf"/></svg>对外协作</span>
+              <p>参与 AI 接入编辑器的协作，推动内部对接优化。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 作品集 -->
+    <section id="portfolio" class="section">
+      <h2 class="section-title">
+        <span class="title-card"><svg class="icon"><use href="#icon-camera"/></svg>作品集</span>
+      </h2>
+      <p class="section-sub">按方向收录代表案例，点击图片可放大查看</p>
+
+      <!-- 任务叙事：精选展板，支持左右翻页 -->
+      <div class="portfolio-module" id="portfolio-task">
+        <div class="portfolio-module-head">
+          <span class="portfolio-module-icon"><svg class="icon"><use href="#icon-doc"/></svg></span>
+          <h3 class="portfolio-module-title">任务叙事</h3>
+        </div>
+        <div class="task-showcase">
+          <div class="task-slides">
+
+          <div class="task-slide active" data-slide="0">
+            <div class="task-slide-inner">
+              <h3 class="task-slide-title">任务叙事</h3>
+              <p class="task-stat">2024年至今，完成主线 / NPC生辰奇遇 / 天宁节奇遇&支线 / 日常逸闻 / 雅集 / 周年庆任务等各类任务落地，涉及剧本超 <b>10万字</b>，体验时长超过 <b>20小时</b>。</p>
+              <p class="task-framework-lead">从流程搭建、情景营造、游戏体验三个方面，来展示之前的作品：</p>
+              <div class="task-pillars">
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-compass"/></svg></span>流程搭建</div>
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-window"/></svg></span>情景营造</div>
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-gamepad"/></svg></span>游戏体验</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="1">
+            <div class="task-slide-inner">
+              <h3 class="task-slide-title">流程搭建：多结局走向</h3>
+              <p class="task-slide-desc">以支线《浮世寸金》为例，根据网状叙事的特性，设计了六种剧情走向，并在其中加入潜行、窃听、解谜、战斗等丰富的剧情体验。</p>
+              <button class="work-thumb-btn task-img-btn" data-caption="浮世寸金 · Action Block 流程图">
+                <img class="work-thumb task-img" src="assets/works/task-narrative/action-block-fushicunjin.png" alt="浮世寸金 Action Block 流程图，展示六种剧情走向的分支结构">
+              </button>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="2">
+            <div class="task-slide-inner">
+              <h3 class="task-slide-title">情景营造 · 周年庆第五章</h3>
+              <p class="task-slide-quote">环境叙事与人物设计 —— 一切为体验服务</p>
+
+              <div class="task-subsection">
+                <h4 class="task-subhead">剧情设定：反差 / 平行时空</h4>
+                <p class="task-slide-desc">连云寨变身连云书院。需要让玩家在行进过程中快速融入这个熟悉又陌生的环境，同时为后面玩家熟悉的 NPC 出场做铺垫——提前建立"NPC 会变换身份"的心理预期。</p>
+                <div class="trait-list">
+                  <div class="trait-row">
+                    <span class="trait-keep">保留：连云弟兄糙汉形象</span>
+                    <svg class="icon trait-arrow"><use href="#icon-chevron-right"/></svg>
+                    <span class="trait-change">改变：拿着武器 → 拿着书</span>
+                  </div>
+                  <div class="trait-row">
+                    <span class="trait-keep">保留：原本聚义厅陈设</span>
+                    <svg class="icon trait-arrow"><use href="#icon-chevron-right"/></svg>
+                    <span class="trait-change">改变：摆放书籍</span>
+                  </div>
+                  <div class="trait-row">
+                    <span class="trait-keep">保留：几组人一起练武切磋</span>
+                    <svg class="icon trait-arrow"><use href="#icon-chevron-right"/></svg>
+                    <span class="trait-change">改变：几人一起读书辩论</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="task-subsection">
+                <h4 class="task-subhead">情景塑造</h4>
+                <div class="task-img-grid">
+                  <button class="work-thumb-btn" data-caption="连云寨议事厅">
+                    <img class="work-thumb" src="assets/works/task-narrative/scene-npc-gathering.png" alt="连云寨议事厅场景，多名NPC列队等候">
+                  </button>
+                  <button class="work-thumb-btn" data-caption="节日庭院氛围">
+                    <img class="work-thumb" src="assets/works/task-narrative/scene-festival-courtyard.png" alt="节日庭院氛围场景，篝火与灯饰布置">
+                  </button>
+                  <button class="work-thumb-btn" data-caption="连云寨山门">
+                    <img class="work-thumb" src="assets/works/task-narrative/scene-gate-courtyard.png" alt="连云寨山门场景，节日装饰的寨门">
+                  </button>
+                </div>
+              </div>
+
+              <div class="task-subsection">
+                <h4 class="task-subhead">人物设计：反差感</h4>
+                <div class="char-compare">
+                  <button class="work-thumb-btn task-img-btn char-compare-img" data-caption="戚少商 · 舞剑待机">
+                    <img class="task-img" src="assets/works/task-narrative/char-qishaoshang.png" alt="戚少商角色截图，手持长剑站立">
+                  </button>
+                  <div class="char-compare-body">
+                    <p class="char-compare-name">戚少商</p>
+                    <p class="char-compare-motion">舞剑待机 —— 不太会武，举不住剑</p>
+                    <p class="char-compare-note">与之前的设定形成反差</p>
+                  </div>
+                </div>
+                <div class="char-compare">
+                  <button class="work-thumb-btn task-img-btn char-compare-img" data-caption="玩家 · 舞剑待机">
+                    <img class="task-img" src="assets/works/task-narrative/char-player.png" alt="玩家角色截图，手持长剑站立">
+                  </button>
+                  <div class="char-compare-body">
+                    <p class="char-compare-name">玩家</p>
+                    <p class="char-compare-motion">舞剑待机 —— 耍帅</p>
+                    <p class="char-compare-note">让玩家教"大哥"，反差感——愉悦的体验</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="3">
+            <div class="task-slide-inner">
+              <div class="task-slide-head">
+                <h3 class="task-slide-title">情景营造 · 周年庆第七章</h3>
+                <a class="task-video-link" href="https://www.bilibili.com/video/BV1M17L6zEXB/?p=9&share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=24" target="_blank" rel="noopener" title="【逆水寒ol】2026八周年 剧情汇总 · 精准空降到 00:24">
+                  <svg class="icon"><use href="#icon-play"/></svg>视频 00:24
+                </a>
+              </div>
+              <p class="task-slide-quote">场景设计：星空元素 + 终点灵魂之树</p>
+              <p class="task-method-tag">环境叙事 · 传递情绪 / Show, Not Tell（减少用文字教玩家）</p>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">沉浸式剧情 · UI 减法 + 音乐配合</p>
+                  <p class="task-highlight-desc">用场景本身承担引导职能，而不是靠文字提示打断沉浸——这也是环境叙事"提示玩法"用途的具体应用。</p>
+                </div>
+                <div class="trait-list">
+                  <div class="trait-row">
+                    <span class="trait-change">Tip + 地面星光做导航指引</span>
+                  </div>
+                  <div class="trait-row">
+                    <span class="trait-change">隐藏任务栏，减少视觉干扰</span>
+                  </div>
+                  <div class="trait-row">
+                    <span class="trait-change">承接第三视角 + 路径行走沉浸模式</span>
+                  </div>
+                </div>
+                <div class="task-img-single">
+                  <button class="work-thumb-btn" data-caption="星光地面导航 · 跟随星光肉眼探索">
+                    <img class="work-thumb" src="assets/works/task-narrative/scene-starlight-path.png" alt="星光地面导航截图，地面星光路径指引玩家探索">
+                  </button>
+                </div>
+              </div>
+
+              <p class="task-slide-echo">从第六章的「还原感」，到第七章的「记忆锚点」—— 同一套设计方法论的延续。</p>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="4">
+            <div class="task-slide-inner">
+              <div class="task-slide-head">
+                <h3 class="task-slide-title">沉浸体验 · 周年庆第六章</h3>
+                <a class="task-video-link" href="https://www.bilibili.com/video/BV1M17L6zEXB/?p=8&share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=860" target="_blank" rel="noopener" title="【逆水寒ol】2026八周年 剧情汇总 · 精准空降到 14:20">
+                  <svg class="icon"><use href="#icon-play"/></svg>视频 14:20
+                </a>
+              </div>
+              <p class="task-slide-quote">玩家穿越到平行时空，重历过去的重大事件，同时遇见平行时空的自己</p>
+              <p class="task-method-tag">叙事奖励 Narrative Moment（情感链接的建立与加深）/ 互动叙事 · 模拟与反馈</p>
+
+              <div class="task-img-pair">
+                <button class="work-thumb-btn" data-caption="平行时空 · 无限之境">
+                  <img class="work-thumb" src="assets/works/task-narrative/scene-nebula-infinity.png" alt="平行时空星云场景，无限符号星轨与孤身行走的角色">
+                </button>
+                <button class="work-thumb-btn" data-caption="记忆回溯 · 人物肖像">
+                  <img class="work-thumb" src="assets/works/task-narrative/char-portrait-memory.png" alt="角色肖像截图，记忆回溯场景">
+                </button>
+              </div>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">重点 · 还原</p>
+                  <p class="task-highlight-desc">还原玩家过去亲身经历的剧情，才能有更深刻的体验——用玩家自己的记忆作为「体验目标」的情绪基底。</p>
+                </div>
+              </div>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">难点 · 交互感</p>
+                  <p class="task-highlight-desc">第三视角，以及与平行时空的「我」之间的交互感。</p>
+                </div>
+                <p class="task-slide-desc">1:1 复刻的关键情节点，通过视角切换制造「旁观者→当局者」的行为式互动：</p>
+                <div class="pov-list">
+                  <div class="pov-row">
+                    <span class="pov-event">祭祖大典</span>
+                    <span class="pov-from">第一视角祭拜</span>
+                    <svg class="icon trait-arrow"><use href="#icon-chevron-right"/></svg>
+                    <span class="pov-to">第三视角的观察</span>
+                  </div>
+                  <div class="pov-row">
+                    <span class="pov-event">燕诗二与师兄叶问舟战斗</span>
+                    <span class="pov-from">第三视角的观察</span>
+                    <svg class="icon trait-arrow"><use href="#icon-chevron-right"/></svg>
+                    <span class="pov-to">第一视角战斗</span>
+                  </div>
+                  <div class="pov-row">
+                    <span class="pov-event">师兄 / 师姐帮忙挡剑</span>
+                    <span class="pov-from">第三视角的观察</span>
+                    <svg class="icon trait-arrow"><use href="#icon-chevron-right"/></svg>
+                    <span class="pov-to">第一时间刺出</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">情感靠内心 OS</p>
+                  <p class="task-highlight-desc">1:1 复刻只能还原「发生了什么」；想让玩家有更深的情感体验，要在玩家的内心世界做艺术化创作，同时使用相似的手法强化玩家的感受。</p>
+                </div>
+              </div>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">视听 · 沉浸</p>
+                  <p class="task-highlight-desc">特殊滤镜（素材可从大宋映画里直接翻）+ 层层递进的音乐切换 + 耳鸣音效，通过视觉与听觉的双重模拟增强玩家的代入感。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="task-nav">
+          <button class="task-nav-btn task-nav-prev" aria-label="上一页"><svg class="icon"><use href="#icon-chevron-left"/></svg></button>
+          <div class="task-dots">
+            <button class="task-dot active" data-slide="0" aria-label="第1页"></button>
+            <button class="task-dot" data-slide="1" aria-label="第2页"></button>
+            <button class="task-dot" data-slide="2" aria-label="第3页"></button>
+            <button class="task-dot" data-slide="3" aria-label="第4页"></button>
+            <button class="task-dot" data-slide="4" aria-label="第5页"></button>
+          </div>
+          <button class="task-nav-btn task-nav-next" aria-label="下一页"><svg class="icon"><use href="#icon-chevron-right"/></svg></button>
+        </div>
+        </div>
+      </div>
+
+      <!-- 剧情玩法：精选展板，支持左右翻页 -->
+      <div class="portfolio-module" id="portfolio-plot">
+        <div class="portfolio-module-head">
+          <span class="portfolio-module-icon"><svg class="icon"><use href="#icon-window"/></svg></span>
+          <h3 class="portfolio-module-title">剧情玩法</h3>
+        </div>
+        <div class="task-showcase">
+          <div class="task-slides">
+
+          <div class="task-slide active" data-slide="0">
+            <div class="task-slide-inner">
+              <h3 class="task-slide-title">剧情玩法设计</h3>
+              <p class="task-stat">先后负责多个叙事关卡，各类小玩法的方案、落地和调优，包括潜行、解谜、战斗、界面玩法等，侧重沉浸体验、调动玩家情绪。</p>
+              <p class="task-framework-lead">以下展开五个代表性案例：</p>
+              <div class="task-pillars">
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-frame"/></svg></span>宣和广记 · 收集反馈</div>
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-doc"/></svg></span>民愿 · 叙事耦合</div>
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-sword"/></svg></span>战斗 · 情绪递进</div>
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-puzzle"/></svg></span>推理 · 承上启下</div>
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-dice"/></svg></span>DIY 玩法 · 轻量化</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="1">
+            <div class="task-slide-inner">
+              <div class="task-slide-head">
+                <h3 class="task-slide-title">宣和广记 · 收集玩法</h3>
+                <a class="task-video-link" href="https://www.bilibili.com/video/BV1maZJBLE61/?share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=25" target="_blank" rel="noopener" title="【逆水寒ol】天宁节支线·石头记·烟波江上（下）· 精准空降到 00:25">
+                  <svg class="icon"><use href="#icon-play"/></svg>视频 00:25
+                </a>
+              </div>
+              <p class="task-slide-quote">用碎片化的图鉴内容补全网状叙事的留白，收集本身成为一种正反馈</p>
+              <p class="task-method-tag">离散叙事 Discrete Storytelling · 描述类图鉴（第三人称，只呈现关键片段）+ OCR Loop（收集的 Reward 被赋予情感意义）</p>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">叙事定位</p>
+                  <p class="task-highlight-desc">结合天宁节的故事背景与整体叙事风格设计，每一条「宣和广记」独立成篇、点到即止，作为主线网状叙事之外的补充侧写，填补支线之间的留白，不打断主线节奏。</p>
+                </div>
+                <div class="task-highlight">
+                  <p class="task-highlight-title">收集反馈</p>
+                  <p class="task-highlight-desc">目标是集齐散落各处的广记条目，挑战是在场景中留意细节找到收藏点，奖励不只是数值物件，更是「拼出完整世界侧写」的达成感——收集玩法同时服务叙事完整度，也构成一次完整的 OCR 体验循环。</p>
+                </div>
+              </div>
+              <div class="task-img-pair">
+                <button class="work-thumb-btn task-img-btn" data-caption="宣和广记 · 人物词条收集面板">
+                  <img class="task-img" src="assets/works/plot-gameplay/xuanhe-people-collection.png" alt="宣和广记人物词条收集面板截图，多个人物条目及收集进度">
+                </button>
+                <button class="work-thumb-btn task-img-btn" data-caption="宣和广记 · 因缘际会人物关系图">
+                  <img class="task-img" src="assets/works/plot-gameplay/xuanhe-relationship-map.png" alt="宣和广记因缘际会人物关系图截图，展示人物之间的关系网络">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="2">
+            <div class="task-slide-inner">
+              <div class="task-slide-head">
+                <h3 class="task-slide-title">民愿 · 收集玩法</h3>
+                <a class="task-video-link" href="https://www.bilibili.com/video/BV1maZJBLE61/?share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=2849" target="_blank" rel="noopener" title="【逆水寒ol】天宁节支线·石头记·烟波江上（下）· 精准空降到 47:29">
+                  <svg class="icon"><use href="#icon-play"/></svg>视频 47:29
+                </a>
+              </div>
+              <p class="task-slide-quote">碎片化的心愿记录，最终转化为主线证据 —— 收集行为获得叙事重量</p>
+              <p class="task-method-tag">离散叙事 Discrete Storytelling · 记录类心愿（第一人称）/ 叙事时刻 Narrative Moment（收集道具反转为剧情证据）</p>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">叙事定位</p>
+                  <p class="task-highlight-desc">结合天宁节「献石·刻石」的故事主题，把任务中重要人物的心愿逐条记录下来，用第一人称的只言片语勾勒出各自的处境与遗憾。</p>
+                </div>
+                <div class="task-highlight">
+                  <p class="task-highlight-title">Reward 的情感升级</p>
+                  <p class="task-highlight-desc">这些碎片记录不是收集玩法的终点——它们在最终章反转为关键证据，串联起整条支线的真相。收集玩法与主线叙事直接耦合，让玩家的收集行为获得叙事重量，而不只是数值奖励。</p>
+                </div>
+              </div>
+              <div class="task-img-single">
+                <button class="work-thumb-btn task-img-btn" data-caption="民愿 · 心愿碎片收集地图">
+                  <img class="task-img" src="assets/works/plot-gameplay/minyuan-island-map.png" alt="民愿收集地图截图，多个心愿碎片节点分布在岛屿地图上，节点间以连线关联">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="3">
+            <div class="task-slide-inner">
+              <div class="task-slide-head">
+                <h3 class="task-slide-title">战斗设计 · 情绪递进</h3>
+                <a class="task-video-link" href="https://www.bilibili.com/video/BV1M17L6zEXB/?p=7&share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=1055" target="_blank" rel="noopener" title="【逆水寒ol】2026八周年 剧情汇总 · 精准空降到 17:35">
+                  <svg class="icon"><use href="#icon-play"/></svg>视频 17:35
+                </a>
+              </div>
+              <p class="task-slide-quote">战斗 + 抵挡箭雨 + 动画演出，情绪层层递进</p>
+              <p class="task-method-tag">Tension Curve 张力曲线（战斗与动画演出交替推进，峰值留在情绪最高点）</p>
+              <div class="task-img-single">
+                <button class="work-thumb-btn task-img-btn" data-caption="战斗 · 掩护同伴，动画演出与战斗玩法交织推进情绪">
+                  <img class="task-img" src="assets/works/plot-gameplay/battle-scene-sanmei.png" alt="战斗场景截图，角色掩护同伴对抗敌军，动画演出与战斗玩法交织">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="4">
+            <div class="task-slide-inner">
+              <div class="task-slide-head">
+                <h3 class="task-slide-title">推理玩法 · 承上启下</h3>
+                <a class="task-video-link" href="https://www.bilibili.com/video/BV1M17L6zEXB/?p=8&share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=724" target="_blank" rel="noopener" title="【逆水寒ol】2026八周年 剧情汇总 · 精准空降到 12:04">
+                  <svg class="icon"><use href="#icon-play"/></svg>视频 12:04
+                </a>
+              </div>
+              <p class="task-slide-quote">帮助玩家理清思路 —— 承上启下</p>
+              <p class="task-method-tag">Puzzle Design · 迷惑点与领悟（用错乱思绪制造"不可能感"，逐步理清换来"我很聪明"的正反馈）</p>
+              <div class="task-img-single">
+                <button class="work-thumb-btn task-img-btn" data-caption="推理玩法 · 排除心中杂念，理清正确思绪">
+                  <img class="task-img" src="assets/works/plot-gameplay/puzzle-thought-clearing.png" alt="推理玩法截图，通过对话选项排除心中杂念找出正确思绪">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="5">
+            <div class="task-slide-inner">
+              <div class="task-slide-head">
+                <h3 class="task-slide-title">DIY 说英雄卡玩法</h3>
+                <a class="task-video-link" href="https://www.bilibili.com/video/BV1M17L6zEXB/?p=9&share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=453" target="_blank" rel="noopener" title="【逆水寒ol】2026八周年 剧情汇总 · 精准空降到 07:33">
+                  <svg class="icon"><use href="#icon-play"/></svg>视频 07:33
+                </a>
+              </div>
+              <p class="task-slide-quote">总体方向：轻量化 —— 拼贴 + 画笔，以拼贴为主，用最少的新增换最大的效果</p>
+
+              <div class="task-subsection">
+                <div class="task-img-single task-img-single--sm">
+                  <button class="work-thumb-btn task-img-btn" data-caption="DIY 说英雄卡 · 拼贴玩家专属卡面">
+                    <img class="task-img" src="assets/works/plot-gameplay/diy-hero-card-collage.png" alt="DIY说英雄卡截图，拼贴风格的玩家角色卡面">
+                  </button>
+                </div>
+              </div>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">难点</p>
+                </div>
+                <div class="trait-list">
+                  <div class="trait-row">
+                    <span class="trait-change">跨系统数据读取：三服玩家数据</span>
+                  </div>
+                  <div class="trait-row">
+                    <span class="trait-change">随机逻辑的边界条件</span>
+                  </div>
+                  <div class="trait-row">
+                    <span class="trait-change">名字替换在 Dialog / SceneSay / Item 三种场景</span>
+                  </div>
+                  <div class="trait-row">
+                    <span class="trait-change">首次领取 vs 重复体验的状态控制</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+          <div class="task-nav">
+            <button class="task-nav-btn task-nav-prev" aria-label="上一页"><svg class="icon"><use href="#icon-chevron-left"/></svg></button>
+            <div class="task-dots">
+              <button class="task-dot active" data-slide="0" aria-label="第1页"></button>
+              <button class="task-dot" data-slide="1" aria-label="第2页"></button>
+              <button class="task-dot" data-slide="2" aria-label="第3页"></button>
+              <button class="task-dot" data-slide="3" aria-label="第4页"></button>
+              <button class="task-dot" data-slide="4" aria-label="第5页"></button>
+              <button class="task-dot" data-slide="5" aria-label="第6页"></button>
+            </div>
+            <button class="task-nav-btn task-nav-next" aria-label="下一页"><svg class="icon"><use href="#icon-chevron-right"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 动画演出：内容整理中，后续参照「任务叙事」的展板模式补充 -->
+      <div class="portfolio-module" id="portfolio-anime">
+        <div class="portfolio-module-head">
+          <span class="portfolio-module-icon"><svg class="icon"><use href="#icon-film"/></svg></span>
+          <h3 class="portfolio-module-title">动画演出</h3>
+        </div>
+        <div class="task-showcase">
+          <div class="task-slides">
+
+          <div class="task-slide active" data-slide="0">
+            <div class="task-slide-inner">
+              <h3 class="task-slide-title">剧情动画演出</h3>
+              <p class="task-stat">参与多个剧情动画的拍摄执行，同时监修主线动画的呈现效果与外宣物料 —— 从演出细节到最终成片，全流程参与打磨。</p>
+              <p class="task-framework-lead">以下展开两个代表性案例：</p>
+              <div class="task-pillars">
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-camera"/></svg></span>主线动画 & 周年庆片段</div>
+                <div class="task-pillar"><span class="task-pillar-icon"><svg class="icon"><use href="#icon-frame"/></svg></span>监修 · 呈现与外宣</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="1">
+            <div class="task-slide-inner">
+              <h3 class="task-slide-title">主线动画 & 周年庆片段</h3>
+
+              <div class="task-subsection">
+                <div class="task-slide-head">
+                  <p class="task-subhead">主线动画选段 · 注重细节与情绪表达</p>
+                  <a class="task-video-link" href="https://www.bilibili.com/video/BV1Vq4y1s7Xd/?p=129&share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=1973" target="_blank" rel="noopener" title="【逆水寒OL】女号视角主线剧情收录（叶问舟燕无归双线）· 精准空降到 32:53">
+                    <svg class="icon"><use href="#icon-play"/></svg>视频 32:53
+                  </a>
+                </div>
+                <p class="task-method-tag">互动叙事 · Simulation 模拟（用镜头运动、微表情、光影细节强化代入感，而非文字直接告知情绪）</p>
+              </div>
+
+              <div class="task-subsection">
+                <div class="task-slide-head">
+                  <p class="task-subhead">周年庆片段 · 注重沉浸体验</p>
+                  <a class="task-video-link" href="https://www.bilibili.com/video/BV1M17L6zEXB/?p=8&share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1&t=790" target="_blank" rel="noopener" title="【逆水寒ol】2026八周年 剧情汇总 · 精准空降到 13:10">
+                    <svg class="icon"><use href="#icon-play"/></svg>视频 13:10
+                  </a>
+                </div>
+                <p class="task-method-tag">Action Block · 引擎内演出（体验流中的关键节拍）+ Tension Curve 张力曲线（节奏起落服务情绪峰值）</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-slide" data-slide="2">
+            <div class="task-slide-inner">
+              <div class="task-slide-head">
+                <h3 class="task-slide-title">监修主线动画 & 外宣物料</h3>
+                <a class="task-video-link" href="https://www.bilibili.com/video/BV1YhT46HEb9/?share_source=copy_web&vd_source=d21bb41ad80dae29a5fd29bfa2536aa1" target="_blank" rel="noopener" title="【主线剧情】重回盛家庄，蛊毒有救了？">
+                  <svg class="icon"><use href="#icon-play"/></svg>视频
+                </a>
+              </div>
+              <p class="task-slide-quote">除了参与拍摄，也负责主线动画的监修与对外宣传物料的把关</p>
+
+              <div class="task-subsection">
+                <div class="task-highlight">
+                  <p class="task-highlight-title">监修职责</p>
+                  <p class="task-highlight-desc">对主线动画的呈现效果、剧情逻辑一致性做把关审核，确保最终成片符合叙事设计的初始意图。</p>
+                </div>
+                <div class="task-highlight">
+                  <p class="task-highlight-title">外宣协同</p>
+                  <p class="task-highlight-desc">面向站外传播的宣传向剪辑内容，需要在保留剧情信息量与吸引路人观众之间找平衡，是叙事设计能力向外部表达的一次延伸。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+          <div class="task-nav">
+            <button class="task-nav-btn task-nav-prev" aria-label="上一页"><svg class="icon"><use href="#icon-chevron-left"/></svg></button>
+            <div class="task-dots">
+              <button class="task-dot active" data-slide="0" aria-label="第1页"></button>
+              <button class="task-dot" data-slide="1" aria-label="第2页"></button>
+              <button class="task-dot" data-slide="2" aria-label="第3页"></button>
+            </div>
+            <button class="task-nav-btn task-nav-next" aria-label="下一页"><svg class="icon"><use href="#icon-chevron-right"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 游戏图鉴 -->
+    <section id="gamelog" class="section">
+      <h2 class="section-title">
+        <span class="title-card"><svg class="icon"><use href="#icon-gamepad"/></svg>游戏图鉴</span>
+      </h2>
+      <p class="section-sub">玩家视角的经验值来源，覆盖 MMO / 动作 / RPG / 互动电影 / 轻解谜</p>
+
+      <!-- 徽章展柜：参考 Steam 徽章收藏排版，点击徽章切换下方展板显示的游戏 -->
+      <div class="badge-shelf">
+        <button class="badge-tile badge-tile--mmo active" data-cat="mmo"><svg class="icon"><use href="#icon-compass"/></svg><span>MMO</span></button>
+        <button class="badge-tile badge-tile--action" data-cat="action"><svg class="icon"><use href="#icon-sword"/></svg><span>动作</span></button>
+        <button class="badge-tile badge-tile--rpg" data-cat="rpg"><svg class="icon"><use href="#icon-dice"/></svg><span>RPG</span></button>
+        <button class="badge-tile badge-tile--movie" data-cat="movie"><svg class="icon"><use href="#icon-mask"/></svg><span>互动电影</span></button>
+        <button class="badge-tile badge-tile--puzzle" data-cat="puzzle"><svg class="icon"><use href="#icon-puzzle"/></svg><span>轻解谜</span></button>
+      </div>
+
+      <!-- 展板：点击上方徽章后，这里只显示对应分类的游戏 -->
+      <div class="card dex-board" id="dexBoard">
+
+        <div class="dex-category active" data-cat="mmo">
+          <div class="dex-grid">
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">燕云十六声</span><span class="dex-item-meta">600h+ · 探索满</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">逆水寒</span><span class="dex-item-meta">600h+</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dex-category" data-cat="action">
+          <div class="dex-grid">
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">007</span><span class="dex-item-meta">通关</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">蜘蛛侠2</span><span class="dex-item-meta">20h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">黑神话</span><span class="dex-item-meta">50h</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dex-category" data-cat="rpg">
+          <div class="dex-grid">
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">33远征队</span><span class="dex-item-meta">50h</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">赛博朋克2077</span><span class="dex-item-meta">100h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">塞尔达1&2</span><span class="dex-item-meta">300h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">动物森友会</span><span class="dex-item-meta">300h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">极乐迪斯科</span><span class="dex-item-meta">100h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">星露谷</span><span class="dex-item-meta">80h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">红弦俱乐部</span><span class="dex-item-meta">通关</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">逆转裁判</span><span class="dex-item-meta">40h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">Mixtape</span><span class="dex-item-meta">&nbsp;</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dex-category" data-cat="movie">
+          <div class="dex-grid">
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">底特律：变人</span><span class="dex-item-meta">50h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">荒野大镖客2</span><span class="dex-item-meta">200h+</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">双人成行</span><span class="dex-item-meta">80h+</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dex-category" data-cat="puzzle">
+          <div class="dex-grid">
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">锈湖 & 方块逃脱全系列</span><span class="dex-item-meta">&nbsp;</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">山河旅探</span><span class="dex-item-meta">&nbsp;</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">巴别塔圣歌</span><span class="dex-item-meta">&nbsp;</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">婆罗洲的红珍珠</span><span class="dex-item-meta">&nbsp;</span></span>
+            </div>
+            <div class="dex-item">
+              <span class="dex-item-info"><span class="dex-item-name">鲁特里一家</span><span class="dex-item-meta">&nbsp;</span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section">
+      <h2 class="section-title">
+        <span class="title-card"><svg class="icon"><use href="#icon-mail"/></svg>联系方式</span>
+      </h2>
+      <div class="card contact-card">
+        <div class="contact-row"><svg class="icon"><use href="#icon-phone"/></svg>15850366271</div>
+        <div class="contact-row"><svg class="icon"><use href="#icon-mail"/></svg>865839942@qq.com</div>
+        <div class="contact-row"><svg class="icon"><use href="#icon-chat"/></svg>微信 · LoveLoves2LoveLove</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 底部海浪装饰（原创绘制，风格致意 animal-island-ui 的 Footer sea 组件，非直接复用其素材） -->
+  <div class="wave-footer" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+      <path d="M0,80 C240,30 480,30 720,70 C960,110 1200,110 1440,60 L1440,160 L0,160 Z" fill="#98d2e3"/>
+      <path d="M0,110 C260,70 520,140 780,100 C1040,60 1300,90 1440,110 L1440,160 L0,160 Z" fill="#327a93"/>
+      <path d="M0,135 C300,115 600,150 900,130 C1140,114 1320,132 1440,135 L1440,160 L0,160 Z" fill="#008077"/>
+      <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.6">
+        <path d="M120,44 q10,-8 20,0"/>
+        <path d="M170,54 q10,-8 20,0"/>
+        <path d="M1180,40 q10,-8 20,0"/>
+      </g>
+      <path d="M60,40 L100,55 L60,55 Z" fill="#ec7175"/>
+      <line x1="60" y1="30" x2="60" y2="55" stroke="#ec7175" stroke-width="3"/>
+    </svg>
+  </div>
+
+  <footer class="footer">
+    <p>存档已自动保存 · © 程语燃 · Task Designer</p>
+  </footer>
+
+</div>
+
+<!-- 作品图放大预览 -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="关闭预览"><svg class="icon"><use href="#icon-close"/></svg></button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
