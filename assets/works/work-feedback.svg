@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#e6f9f6"/>
+  <g fill="none" stroke="#11a89b" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M600 300 L1000 300 L1000 480 L720 480 L640 540 L660 480 L600 480 Z"/>
+    <path d="M660 380 L900 380 M660 430 L840 430"/>
+  </g>
+  <text x="800" y="700" font-family="Nunito, 'Noto Sans SC', sans-serif" font-size="46" font-weight="800" fill="#11a89b" text-anchor="middle">玩家反馈 · 待替换案例图</text>
+  <text x="800" y="760" font-family="Nunito, 'Noto Sans SC', sans-serif" font-size="26" font-weight="600" fill="#5c9c94" text-anchor="middle">16:9 占位图，可直接替换为截图</text>
+</svg>
